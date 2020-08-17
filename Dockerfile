@@ -20,6 +20,8 @@ RUN  npm install && chown -R chrome:chrome /home/chrome/
 # Run Chrome non-privileged
 USER chrome
 
-EXPOSE 3000
+ENV PORT 80
+
+EXPOSE 80
 
 CMD [ "node", "server.js" ]
